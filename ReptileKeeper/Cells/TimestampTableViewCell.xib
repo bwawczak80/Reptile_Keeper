@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimestampTableViewCell" rowHeight="240" id="KGk-i7-Jjw" customClass="TimestampTableViewCell" customModule="ReptileKeeper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="240"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="386" height="240"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Sab-gX-rjH">
+                        <rect key="frame" x="0.0" y="0.0" width="386" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time of Log:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfp-qN-vNV">
+                                <rect key="frame" x="10" y="0.0" width="110" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bas-i2-jeD"/>
+                                    <constraint firstAttribute="width" constant="110" id="vW0-Ju-9m0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfv-z6-nsw">
+                                <rect key="frame" x="140" y="0.0" width="246" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7kf-CF-PaN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Tfv-z6-nsw" firstAttribute="leading" secondItem="sfp-qN-vNV" secondAttribute="trailing" constant="20" id="QWM-15-HoK"/>
+                            <constraint firstItem="sfp-qN-vNV" firstAttribute="leading" secondItem="Sab-gX-rjH" secondAttribute="leading" constant="10" id="e7U-VT-7Pu"/>
+                            <constraint firstAttribute="trailing" secondItem="Tfv-z6-nsw" secondAttribute="trailing" id="rMg-n6-Doa"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Sab-gX-rjH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0sF-fV-ecE"/>
+                    <constraint firstAttribute="bottom" secondItem="Sab-gX-rjH" secondAttribute="bottom" id="STj-he-Xze"/>
+                    <constraint firstAttribute="trailing" secondItem="Sab-gX-rjH" secondAttribute="trailing" id="gaY-Ru-BXw"/>
+                    <constraint firstItem="Sab-gX-rjH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gqy-Dw-vsP"/>
+                    <constraint firstItem="Sab-gX-rjH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nHa-7a-nfJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="reptile_dk"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="timeTag" destination="Tfv-z6-nsw" id="NoE-LJ-ErU"/>
+            </connections>
+            <point key="canvasLocation" x="102.89855072463769" y="52.901785714285715"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="reptile_dk">
+            <color red="0.4392156862745098" green="0.45490196078431372" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

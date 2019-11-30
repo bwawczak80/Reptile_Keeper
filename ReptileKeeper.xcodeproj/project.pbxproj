@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1139BD29C20CF04527F61E68 /* Pods_ReptileKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9069BDDD35CFD6A7A78F5C94 /* Pods_ReptileKeeper.framework */; };
+		6B00EA172372364700DFEE62 /* AddReptileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B00EA162372364700DFEE62 /* AddReptileViewController.swift */; };
+		6B13EE432381127C00EF7A1B /* ReptileLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B13EE422381127C00EF7A1B /* ReptileLogViewController.swift */; };
+		6B4D80EC238406ED0089F20A /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D80EB238406ED0089F20A /* SummaryViewController.swift */; };
+		6B6673732366E7F500B71884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6673722366E7F500B71884 /* AppDelegate.swift */; };
+		6B6673752366E7F500B71884 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6673742366E7F500B71884 /* SceneDelegate.swift */; };
+		6B6673772366E7F500B71884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6673762366E7F500B71884 /* ViewController.swift */; };
+		6B66737A2366E7F500B71884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B6673782366E7F500B71884 /* Main.storyboard */; };
+		6B66737C2366E7F700B71884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B66737B2366E7F700B71884 /* Assets.xcassets */; };
+		6B66737F2366E7F700B71884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B66737D2366E7F700B71884 /* LaunchScreen.storyboard */; };
+		6B6673872366E8E700B71884 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B6673862366E8E700B71884 /* GoogleService-Info.plist */; };
+		6B6A21AF238DA88B00878D35 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A21AE238DA88B00878D35 /* HistoryViewController.swift */; };
+		6BC12DB9237412B9002FBB48 /* ReptileListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC12DB7237412B9002FBB48 /* ReptileListCellTableViewCell.swift */; };
+		6BC12DBA237412B9002FBB48 /* ReptileListCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC12DB8237412B9002FBB48 /* ReptileListCellTableViewCell.xib */; };
+		6BC4D4B32368794D0038436C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D4B22368794D0038436C /* Utilities.swift */; };
+		6BC4D4B8236879FC0038436C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D4B7236879FC0038436C /* LoginViewController.swift */; };
+		6BC4D4BA23687A0B0038436C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D4B923687A0B0038436C /* HomeViewController.swift */; };
+		6BC4D4BC23687A400038436C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D4BB23687A400038436C /* Constants.swift */; };
+		6BC4D4C023687F470038436C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D4BF23687F470038436C /* SignUpViewController.swift */; };
+		6BC9D056238E170C00FD2103 /* TimestampTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9D054238E170C00FD2103 /* TimestampTableViewCell.swift */; };
+		6BC9D057238E170C00FD2103 /* TimestampTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9D055238E170C00FD2103 /* TimestampTableViewCell.xib */; };
+		6BC9D05A238E172B00FD2103 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9D058238E172B00FD2103 /* HistoryTableViewCell.swift */; };
+		6BC9D05B238E172B00FD2103 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9D059238E172B00FD2103 /* HistoryTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27A06B1E0454B591739B4F5C /* Pods-ReptileKeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReptileKeeper.debug.xcconfig"; path = "Target Support Files/Pods-ReptileKeeper/Pods-ReptileKeeper.debug.xcconfig"; sourceTree = "<group>"; };
+		29E491EF701DD292CC8A790A /* Pods-ReptileKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReptileKeeper.release.xcconfig"; path = "Target Support Files/Pods-ReptileKeeper/Pods-ReptileKeeper.release.xcconfig"; sourceTree = "<group>"; };
+		6B00EA162372364700DFEE62 /* AddReptileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReptileViewController.swift; sourceTree = "<group>"; };
+		6B13EE422381127C00EF7A1B /* ReptileLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReptileLogViewController.swift; sourceTree = "<group>"; };
+		6B4D80EB238406ED0089F20A /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		6B66736F2366E7F500B71884 /* ReptileKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReptileKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6673722366E7F500B71884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6B6673742366E7F500B71884 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6B6673762366E7F500B71884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B6673792366E7F500B71884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B66737B2366E7F700B71884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B66737E2366E7F700B71884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B6673802366E7F700B71884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B6673862366E8E700B71884 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6B6A21AE238DA88B00878D35 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		6BC12DB7237412B9002FBB48 /* ReptileListCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReptileListCellTableViewCell.swift; sourceTree = "<group>"; };
+		6BC12DB8237412B9002FBB48 /* ReptileListCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReptileListCellTableViewCell.xib; sourceTree = "<group>"; };
+		6BC4D4B22368794D0038436C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		6BC4D4B7236879FC0038436C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6BC4D4B923687A0B0038436C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6BC4D4BB23687A400038436C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6BC4D4BF23687F470038436C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6BC9D054238E170C00FD2103 /* TimestampTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampTableViewCell.swift; sourceTree = "<group>"; };
+		6BC9D055238E170C00FD2103 /* TimestampTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimestampTableViewCell.xib; sourceTree = "<group>"; };
+		6BC9D058238E172B00FD2103 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		6BC9D059238E172B00FD2103 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		9069BDDD35CFD6A7A78F5C94 /* Pods_ReptileKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReptileKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B66736C2366E7F500B71884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1139BD29C20CF04527F61E68 /* Pods_ReptileKeeper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FD1DF8DA4E0CAA4124B05F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9069BDDD35CFD6A7A78F5C94 /* Pods_ReptileKeeper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B6673662366E7F500B71884 = {
+			isa = PBXGroup;
+			children = (
+				6B6673712366E7F500B71884 /* ReptileKeeper */,
+				6B6673702366E7F500B71884 /* Products */,
+				B821B1E1884980E388440F21 /* Pods */,
+				2FD1DF8DA4E0CAA4124B05F5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6B6673702366E7F500B71884 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B66736F2366E7F500B71884 /* ReptileKeeper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B6673712366E7F500B71884 /* ReptileKeeper */ = {
+			isa = PBXGroup;
+			children = (
+				6BC4D4B22368794D0038436C /* Utilities.swift */,
+				6BC4D4BB23687A400038436C /* Constants.swift */,
+				6B6673722366E7F500B71884 /* AppDelegate.swift */,
+				6B6673742366E7F500B71884 /* SceneDelegate.swift */,
+				6BC4D4B42368799E0038436C /* ViewControllers */,
+				6BC12DB02374109A002FBB48 /* Cells */,
+				6B6673782366E7F500B71884 /* Main.storyboard */,
+				6B66737B2366E7F700B71884 /* Assets.xcassets */,
+				6B66737D2366E7F700B71884 /* LaunchScreen.storyboard */,
+				6B6673802366E7F700B71884 /* Info.plist */,
+				6B6673862366E8E700B71884 /* GoogleService-Info.plist */,
+			);
+			path = ReptileKeeper;
+			sourceTree = "<group>";
+		};
+		6BC12DB02374109A002FBB48 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6BC12DB7237412B9002FBB48 /* ReptileListCellTableViewCell.swift */,
+				6BC12DB8237412B9002FBB48 /* ReptileListCellTableViewCell.xib */,
+				6BC9D054238E170C00FD2103 /* TimestampTableViewCell.swift */,
+				6BC9D055238E170C00FD2103 /* TimestampTableViewCell.xib */,
+				6BC9D058238E172B00FD2103 /* HistoryTableViewCell.swift */,
+				6BC9D059238E172B00FD2103 /* HistoryTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6BC4D4B42368799E0038436C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6BC4D4BF23687F470038436C /* SignUpViewController.swift */,
+				6B6673762366E7F500B71884 /* ViewController.swift */,
+				6BC4D4B7236879FC0038436C /* LoginViewController.swift */,
+				6BC4D4B923687A0B0038436C /* HomeViewController.swift */,
+				6B00EA162372364700DFEE62 /* AddReptileViewController.swift */,
+				6B13EE422381127C00EF7A1B /* ReptileLogViewController.swift */,
+				6B4D80EB238406ED0089F20A /* SummaryViewController.swift */,
+				6B6A21AE238DA88B00878D35 /* HistoryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B821B1E1884980E388440F21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27A06B1E0454B591739B4F5C /* Pods-ReptileKeeper.debug.xcconfig */,
+				29E491EF701DD292CC8A790A /* Pods-ReptileKeeper.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B66736E2366E7F500B71884 /* ReptileKeeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B6673832366E7F700B71884 /* Build configuration list for PBXNativeTarget "ReptileKeeper" */;
+			buildPhases = (
+				F2E75E4A51817982D67D910D /* [CP] Check Pods Manifest.lock */,
+				6B66736B2366E7F500B71884 /* Sources */,
+				6B66736C2366E7F500B71884 /* Frameworks */,
+				6B66736D2366E7F500B71884 /* Resources */,
+				412C0C9187D45B2E340A37FC /* [CP] Embed Pods Frameworks */,
+				0C8E2F82BA846090BAEB65BC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReptileKeeper;
+			productName = ReptileKeeper;
+			productReference = 6B66736F2366E7F500B71884 /* ReptileKeeper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B6673672366E7F500B71884 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Brian Wawczak";
+				TargetAttributes = {
+					6B66736E2366E7F500B71884 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 6B66736A2366E7F500B71884 /* Build configuration list for PBXProject "ReptileKeeper" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B6673662366E7F500B71884;
+			productRefGroup = 6B6673702366E7F500B71884 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B66736E2366E7F500B71884 /* ReptileKeeper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B66736D2366E7F500B71884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC9D057238E170C00FD2103 /* TimestampTableViewCell.xib in Resources */,
+				6B66737F2366E7F700B71884 /* LaunchScreen.storyboard in Resources */,
+				6B6673872366E8E700B71884 /* GoogleService-Info.plist in Resources */,
+				6B66737C2366E7F700B71884 /* Assets.xcassets in Resources */,
+				6BC12DBA237412B9002FBB48 /* ReptileListCellTableViewCell.xib in Resources */,
+				6BC9D05B238E172B00FD2103 /* HistoryTableViewCell.xib in Resources */,
+				6B66737A2366E7F500B71884 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C8E2F82BA846090BAEB65BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReptileKeeper/Pods-ReptileKeeper-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReptileKeeper/Pods-ReptileKeeper-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReptileKeeper/Pods-ReptileKeeper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		412C0C9187D45B2E340A37FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReptileKeeper/Pods-ReptileKeeper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReptileKeeper/Pods-ReptileKeeper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReptileKeeper/Pods-ReptileKeeper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2E75E4A51817982D67D910D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReptileKeeper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B66736B2366E7F500B71884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B13EE432381127C00EF7A1B /* ReptileLogViewController.swift in Sources */,
+				6BC4D4B8236879FC0038436C /* LoginViewController.swift in Sources */,
+				6BC12DB9237412B9002FBB48 /* ReptileListCellTableViewCell.swift in Sources */,
+				6B6673772366E7F500B71884 /* ViewController.swift in Sources */,
+				6B6A21AF238DA88B00878D35 /* HistoryViewController.swift in Sources */,
+				6B00EA172372364700DFEE62 /* AddReptileViewController.swift in Sources */,
+				6BC4D4C023687F470038436C /* SignUpViewController.swift in Sources */,
+				6B6673732366E7F500B71884 /* AppDelegate.swift in Sources */,
+				6BC4D4B32368794D0038436C /* Utilities.swift in Sources */,
+				6BC9D05A238E172B00FD2103 /* HistoryTableViewCell.swift in Sources */,
+				6B6673752366E7F500B71884 /* SceneDelegate.swift in Sources */,
+				6BC9D056238E170C00FD2103 /* TimestampTableViewCell.swift in Sources */,
+				6BC4D4BA23687A0B0038436C /* HomeViewController.swift in Sources */,
+				6BC4D4BC23687A400038436C /* Constants.swift in Sources */,
+				6B4D80EC238406ED0089F20A /* SummaryViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6B6673782366E7F500B71884 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B6673792366E7F500B71884 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B66737D2366E7F700B71884 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B66737E2366E7F700B71884 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B6673812366E7F700B71884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6B6673822366E7F700B71884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B6673842366E7F700B71884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27A06B1E0454B591739B4F5C /* Pods-ReptileKeeper.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLL5PXFDUH;
+				INFOPLIST_FILE = ReptileKeeper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianwawczak.ReptileKeeper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B6673852366E7F700B71884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29E491EF701DD292CC8A790A /* Pods-ReptileKeeper.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLL5PXFDUH;
+				INFOPLIST_FILE = ReptileKeeper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianwawczak.ReptileKeeper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B66736A2366E7F500B71884 /* Build configuration list for PBXProject "ReptileKeeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B6673812366E7F700B71884 /* Debug */,
+				6B6673822366E7F700B71884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B6673832366E7F700B71884 /* Build configuration list for PBXNativeTarget "ReptileKeeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B6673842366E7F700B71884 /* Debug */,
+				6B6673852366E7F700B71884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B6673672366E7F500B71884 /* Project object */;
+}
