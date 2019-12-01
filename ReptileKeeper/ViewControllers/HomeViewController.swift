@@ -15,7 +15,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let db = Firestore.firestore()
     var reptiles = [Reptile]()
-    //let cellColor = UIColor.init(red: 64/255, green: 65/255, blue: 7/255, alpha: 1)
     let cellColor = UIColor.init(red: 64/255, green: 65/255, blue: 7/255, alpha: 0.9)
     
     @IBOutlet weak var tableView: UITableView!
@@ -28,10 +27,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         
-        // tableView.register gets the xib file and registers it to the ViewController
+        // get the xib file and register it to the ViewController
         let nib = UINib(nibName: "ReptileListCellTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ReptileListCell")
-        
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -41,20 +39,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    //MARK: - Element Styling
-    
     func setUpElements(){
-        //style the elements
-        
-        
         Utilities.styleViewControllerView(self.view)
         Utilities.styleFilledButton(addBtn)
         Utilities.styleTableView(tableView)
         Utilities.styleBackButtons(backBtn)
     }
     
+    
     func getReptileRecords(){
-        // get document
+        // get documents for the currently logged in user
         if let userId = Auth.auth().currentUser?.uid { db.collection("users").document(userId).collection("reptiles").getDocuments { (document, error) in
             if let documents = document?.documents
                 , documents.count > 0 {
@@ -63,7 +57,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         let data = try JSONSerialization.data(withJSONObject: document.data() as Any, options: .prettyPrinted)
                         let decoder = JSONDecoder()
                         let reptile = try decoder.decode(Reptile.self, from: data)
-                        
                         self.reptiles.append(reptile)
                     } catch let err {
                         print("Error:", err)
@@ -78,9 +71,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     //MARK: - TableView Dataview and Datasource
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        //
         return reptiles.count
     }
+    
     
     // Set the spacing between sections
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -101,11 +94,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReptileListCell", for: indexPath) as! ReptileListCellTableViewCell
-        
         let reptile =  reptiles[indexPath.section]
         cell.labelOne.text = reptile.name
         cell.labelTwo.text = reptile.species
@@ -114,7 +104,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.contentView.backgroundColor = cellColor
         cell.labelOne.backgroundColor = UIColor.clear
         cell.labelTwo.backgroundColor = UIColor.clear
-        
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
@@ -133,7 +122,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if (segue.identifier == "seg"){
             if let indexPath = tableView.indexPathForSelectedRow{
                 let repIndex = indexPath.section
-                
                 let reptile = reptiles[repIndex]
                 let repName = reptile.name
                 let nameToSend = repName
@@ -143,5 +131,4 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
-    
 }

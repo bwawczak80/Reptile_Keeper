@@ -16,6 +16,7 @@ struct Constants {
     }
 }
 
+
 struct CellData {
     
     var opened = Bool()
@@ -23,14 +24,15 @@ struct CellData {
     var sectionData = [String]()
 }
 
+
 struct Reptile: Codable {
     var name: String?
     var sex: String?
     var morph: String?
     var species: String?
     var hatchDate: String?
-    
 }
+
 
 struct Log: Codable {
     var temp: String?
@@ -38,9 +40,8 @@ struct Log: Codable {
     var feeding: String?
     var weight: String?
     var time: String?
-    //var opened = Bool()
-    
 }
+
 
 extension UIViewController {
 

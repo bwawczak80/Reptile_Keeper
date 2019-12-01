@@ -24,8 +24,6 @@ class ViewController: UIViewController {
         }
         
     
-    //MARK: - Set Up Elements
-    
         func setUpElements(){
             
             Utilities.styleViewControllerView(self.view)
@@ -33,7 +31,4 @@ class ViewController: UIViewController {
             Utilities.styleFilledButton(loginBtn)
             
         }
-    
-    
-  
 }

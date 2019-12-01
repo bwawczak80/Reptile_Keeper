@@ -21,21 +21,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Do any additional setup after loading the view.
-        
         setUpElements()
     }
-    //MARK: - Set Up Elements
+    
     
     func setUpElements(){
-        
-        // Hide the error label
         errorLabel.alpha = 0
-        
-        //style the elements
-        
         Utilities.styleViewControllerView(self.view)
         Utilities.styleTextField(emailText, string: "Email")
         Utilities.styleTextField(passwordText, string: "Password")
@@ -43,22 +34,21 @@ class LoginViewController: UIViewController {
         Utilities.styleBackButtons(backBtn)
     }
     
+    
     @IBAction func loginBtnTapped(_ sender: Any) {
-        // create cleaned Versions
+        // create cleaned Versions of data
         let email = emailText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordText.text!.trimmingCharacters(in: .whitespacesAndNewlines  )
         
-        // signing in the user
+        // Verify user and get Auth token
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             
             if error != nil {
-                // Couldn't sign in
                 self.errorLabel.text = error!.localizedDescription
-                // show error label
                 self.errorLabel.alpha = 1
             }
+                //if user Auth, open homeViewController
             else {
-                
                 let homeviewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
                 
                 self.view.window?.rootViewController = homeviewController

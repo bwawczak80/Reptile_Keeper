@@ -32,7 +32,6 @@ class ReptileLogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
-        // Do any additional setup after loading the view.
     }
     
     
@@ -50,10 +49,11 @@ class ReptileLogViewController: UIViewController {
             let weight = weightText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let logDict = ["temp":temp, "humidity":humidity, "feeding":feeding, "weight":weight, "time":logTime]
             
-           
             if let userId = user {    db.collection("users").document(userId).collection("reptiles").document(nameVar).collection("logs").addDocument(data: logDict)
                 showToast(message: "Log Added")
                 clearTextFields()
+                weightText.resignFirstResponder()
+                tempText.becomeFirstResponder()
             }
         }
     }
@@ -109,10 +109,10 @@ class ReptileLogViewController: UIViewController {
         return dateTimeStamp
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nameToSend = nameVar
         let destinationVC = segue.destination as! SummaryViewController
         destinationVC.nameVar = nameToSend
     }
 }
-

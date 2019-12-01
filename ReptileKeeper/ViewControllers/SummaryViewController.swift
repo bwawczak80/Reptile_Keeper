@@ -28,8 +28,6 @@ class SummaryViewController: UIViewController {
     
     
     var reptiles = [Reptile]()
-
-    
     var nameVar = String()
     // get a reference to the database
     let db = Firestore.firestore()
@@ -39,9 +37,8 @@ class SummaryViewController: UIViewController {
         
         setUpElements()
         getReptileRecords()
-        
-    
     }
+    
     
     func setUpElements(){
         Utilities.styleViewControllerView(self.view)
@@ -59,8 +56,8 @@ class SummaryViewController: UIViewController {
         Utilities.styleBackButtons(backBtn)
         Utilities.styleFilledButton(logBtn)
         Utilities.styleFilledButton(historyBtn)
-        
     }
+    
     
     func getReptileRecords(){
         // get document
@@ -85,34 +82,31 @@ class SummaryViewController: UIViewController {
                     }
                 }
             }
-            
             }
         }
     }
+    
+    
     @IBAction func addLog(_ sender: Any) {
         performSegue(withIdentifier: "segOne", sender: nil)
     }
+    
     
     @IBAction func historyBtnTapped(_ sender: Any) {
         performSegue(withIdentifier: "historySeg", sender: nil)
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segOne"){
             let nameToSend = nameVar
-            // Create a new variable to store the instance of PlayerTableViewController
             let destinationVC = segue.destination as! ReptileLogViewController
             destinationVC.nameVar = nameToSend
         }
         else if (segue.identifier == "historySeg"){
             let nameToSend = nameVar
-            // Create a new variable to store the instance of PlayerTableViewController
             let destinationVC = segue.destination as! HistoryViewController
             destinationVC.nameVar = nameToSend
         }
-        
     }
-    
-    
-
 }

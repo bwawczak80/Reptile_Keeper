@@ -10,14 +10,8 @@ import UIKit
 import Firebase
 
 
-
-//TODO - add Google authentication
-//TODO - add forgot username/password option at login
-
-
 class AddReptileViewController: UIViewController {
 
-    
     @IBOutlet weak var reptileNameText: UITextField!
     @IBOutlet weak var speciesText: UITextField!
     @IBOutlet weak var morphText: UITextField!
@@ -69,8 +63,6 @@ class AddReptileViewController: UIViewController {
             let morph = morphText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let hatchDate = hatchDateText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let gender = sexText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            
             let repdict = ["name":reptileName, "species":species, "morph":morph, "hatchDate":hatchDate, "sex":gender ]
             
             // write data to Firestore
@@ -84,8 +76,6 @@ class AddReptileViewController: UIViewController {
     }
     
     
-    
-    
     func setUpElements(){
         errorLabel.alpha = 0
         Utilities.styleViewControllerView(self.view)
@@ -96,7 +86,6 @@ class AddReptileViewController: UIViewController {
         Utilities.styleTextField(sexText, string: "Sex")
         Utilities.styleFilledButton(addBtn)
         Utilities.styleBackButtons(backBtn)
-        
     }
     
     
@@ -107,7 +96,5 @@ class AddReptileViewController: UIViewController {
         hatchDateText.text = ""
         sexText.text = ""
     }
-    
-
 }
 

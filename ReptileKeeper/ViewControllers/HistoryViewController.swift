@@ -13,28 +13,26 @@ import FirebaseAuth
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var backBtn: UIButton!
+    
     var tableViewData = [CellData]()
     var logs = [Log]()
     var nameVar = String()
-    
     let cellColor = UIColor.init(red: 64/255, green: 65/255, blue: 7/255, alpha: 0.9)
+    // get reference to database
     let db = Firestore.firestore()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 44
-        tableViewData = []
         
+        tableViewData = []
         setUpElements()
         getReptileRecords()
         
-        
+        // get the xib files and register them to the ViewController
         let logNib = UINib(nibName: "HistoryTableViewCell", bundle: nil)
         tableView.register(logNib, forCellReuseIdentifier: "HistoryTableViewCell")
-        
         let dateNib = UINib(nibName: "TimestampTableViewCell", bundle: nil)
         tableView.register(dateNib, forCellReuseIdentifier: "TimestampTableViewCell")
         
@@ -80,34 +78,25 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         //MARK: - TableView Dataview and Datasource
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("Number of sections\(logs.count)")
         return logs.count
-        
     }
-    
-
-    // Set the spacing between sections
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 12
-//    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableViewData[section].opened == true{
-            //return logs.count
-            
             return 2
         }else{
             return 1
         }
-            
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+    
+        // assign TimestampTableViewCell xib to first row
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TimestampTableViewCell", for: indexPath) as! TimestampTableViewCell
-            let log = logs[indexPath.row]
+            let log = logs[indexPath.section]
             cell.timeTag.text = log.time
             cell.contentView.backgroundColor = cellColor
             cell.layer.borderColor = UIColor.black.cgColor
@@ -116,11 +105,10 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.clipsToBounds = true
             return cell
         }
-            
+            // assign HistoryTableViewCell rows besides the first
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell", for: indexPath) as! HistoryTableViewCell
-            
-            let log = logs[indexPath.row - 1]
+            let log = logs[indexPath.section]
             cell.contentView.backgroundColor = cellColor
             cell.layer.borderColor = UIColor.black.cgColor
             cell.layer.borderWidth = 1
@@ -135,23 +123,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        var height:CGFloat = CGFloat()
-//        if indexPath.row == 1 {
-//            height = 250
-//        }
-//        else {
-//            height = 50
-//        }
-//
-//        return height
-//        //return CGFloat(indexPath.row * 20)
-//    }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        
-        
+        //opens and closes first row on row selection
         if indexPath.row == 0 {
             if tableViewData[indexPath.section].opened == true {
                 tableViewData[indexPath.section].opened = false
@@ -162,15 +136,13 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none)
             }
-            
         }
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         let nameToSend = nameVar
         let destinationVC = segue.destination as! SummaryViewController
         destinationVC.nameVar = nameToSend
     }
-    
 }
