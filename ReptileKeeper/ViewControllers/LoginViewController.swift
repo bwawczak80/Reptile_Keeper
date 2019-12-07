@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var passBtn: UIButton!
     
     
     override func viewDidLoad() {
@@ -32,7 +33,16 @@ class LoginViewController: UIViewController {
         Utilities.styleTextField(passwordText, string: "Password")
         Utilities.styleButton(loginBtn)
         Utilities.styleBackButtons(backBtn)
+        Utilities.styleBackButtons(passBtn)
     }
+    
+     @IBAction func onForgotPassBtnClick(_ sender: Any) {
+        
+        let email = emailText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            Auth.auth().sendPasswordReset(withEmail: email, completion: nil)
+        
+        showToast(message: "Check Email for reset link")
+        }
     
     
     @IBAction func loginBtnTapped(_ sender: Any) {

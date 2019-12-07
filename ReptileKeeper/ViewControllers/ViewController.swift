@@ -16,14 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpElements()
+        
         }
         
-    
         func setUpElements(){
             
             Utilities.styleViewControllerView(self.view)

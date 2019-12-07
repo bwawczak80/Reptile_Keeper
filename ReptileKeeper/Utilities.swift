@@ -13,7 +13,7 @@ class Utilities {
     
     
     static func styleViewControllerView(_ view:UIView) {
-        view.backgroundColor = UIColor.init(red: 47/255, green: 51/255, blue: 4/255, alpha: 1)
+        view.backgroundColor = UIColor.init(red: 43/255, green: 47/255, blue: 0/255, alpha: 1)
     }
     
     

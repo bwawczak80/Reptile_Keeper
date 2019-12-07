@@ -42,17 +42,17 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snake" translatesAutoresizingMaskIntoConstraints="NO" id="ldN-9Q-Bev">
-                                <rect key="frame" x="20" y="20" width="335" height="524"/>
+                                <rect key="frame" x="20" y="10" width="335" height="544"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="reptile_dk"/>
                         <constraints>
-                            <constraint firstItem="ldN-9Q-Bev" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5r1-mV-UwN"/>
+                            <constraint firstItem="ldN-9Q-Bev" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="5r1-mV-UwN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GmO-jE-gwR" secondAttribute="bottom" constant="40" id="EX6-XN-sYP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ldN-9Q-Bev" secondAttribute="trailing" constant="20" id="J6b-7s-RIV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GmO-jE-gwR" secondAttribute="trailing" constant="40" id="LJe-8c-q8J"/>
                             <constraint firstItem="ldN-9Q-Bev" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZLK-Y1-fQu"/>
-                            <constraint firstItem="GmO-jE-gwR" firstAttribute="top" secondItem="ldN-9Q-Bev" secondAttribute="bottom" constant="20" id="bCP-ae-DZz"/>
+                            <constraint firstItem="GmO-jE-gwR" firstAttribute="top" secondItem="ldN-9Q-Bev" secondAttribute="bottom" constant="10" id="bCP-ae-DZz"/>
                             <constraint firstItem="GmO-jE-gwR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="xvS-oT-YyI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -83,7 +83,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="THU-uY-bzW">
-                                <rect key="frame" x="40" y="100.00000000000001" width="295" height="230.33333333333337"/>
+                                <rect key="frame" x="40" y="100" width="295" height="277.33333333333331"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vxf-NZ-bfw">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
@@ -111,6 +111,14 @@
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3l-jL-kjg">
+                                        <rect key="frame" x="0.0" y="250.33333333333331" width="295" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Forgot Password?"/>
+                                        <connections>
+                                            <action selector="onForgotPassBtnClick:" destination="a7W-Rp-z0r" eventType="touchUpInside" id="7i3-Wj-4ti"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Vxf-NZ-bfw" firstAttribute="height" secondItem="B0l-un-ZwO" secondAttribute="height" id="8zy-eS-49d"/>
@@ -155,6 +163,7 @@
                         <outlet property="emailText" destination="Vxf-NZ-bfw" id="lz8-ru-v2R"/>
                         <outlet property="errorLabel" destination="Qsr-2L-kwi" id="6QP-nk-ZOk"/>
                         <outlet property="loginBtn" destination="B0l-un-ZwO" id="78f-1u-0nm"/>
+                        <outlet property="passBtn" destination="S3l-jL-kjg" id="a3X-8G-TkV"/>
                         <outlet property="passwordText" destination="rFD-5m-sOd" id="PCO-3i-Sd4"/>
                     </connections>
                 </viewController>
@@ -1067,6 +1076,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="7cl-93-qVE"/>
         <segue reference="09U-kN-bmG"/>
-        <segue reference="vX3-OB-27u"/>
+        <segue reference="2yV-Mo-KBi"/>
     </inferredMetricsTieBreakers>
 </document>
