@@ -26,19 +26,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableViewData = []
         setUpElements()
         getReptileRecords()
-        
-        // get the xib files and register them to the ViewController
-        let logNib = UINib(nibName: "HistoryTableViewCell", bundle: nil)
-        tableView.register(logNib, forCellReuseIdentifier: "HistoryTableViewCell")
-        let dateNib = UINib(nibName: "TimestampTableViewCell", bundle: nil)
-        tableView.register(dateNib, forCellReuseIdentifier: "TimestampTableViewCell")
-        
-        
-        tableView.dataSource = self
-        tableView.delegate = self
+        registerTableView()
     }
     
     
@@ -52,10 +42,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
                         let data = try JSONSerialization.data(withJSONObject: document.data() as Any, options: .prettyPrinted)
                         let decoder = JSONDecoder()
                         let log = try decoder.decode(Log.self, from: data)
-                        
                         self.logs.append(log)
                         self.tableViewData.append(CellData(opened: false))
-                        
                     } catch let err {
                         print("Error:", err)
                     }
@@ -68,7 +56,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func setUpElements() {
-        
         Utilities.styleTableView(tableView)
         Utilities.styleViewControllerView(self.view)
         Utilities.styleBackButtons(backBtn)
@@ -91,7 +78,18 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+    func registerTableView(){
+        let logNib = UINib(nibName: "HistoryTableViewCell", bundle: nil)
+        tableView.register(logNib, forCellReuseIdentifier: "HistoryTableViewCell")
+        let dateNib = UINib(nibName: "TimestampTableViewCell", bundle: nil)
+        tableView.register(dateNib, forCellReuseIdentifier: "TimestampTableViewCell")
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
     
         // assign TimestampTableViewCell xib to first row
         if indexPath.row == 0 {
@@ -103,9 +101,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.layer.borderWidth = 1
             cell.layer.cornerRadius = 8
             cell.clipsToBounds = true
+            
             return cell
         }
-            // assign HistoryTableViewCell rows besides the first
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell", for: indexPath) as! HistoryTableViewCell
             let log = logs[indexPath.section]

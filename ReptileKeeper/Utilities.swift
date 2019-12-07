@@ -29,8 +29,7 @@ class Utilities {
     }
     
     
-    static func styleFilledButton(_ button:UIButton) {
-        // Filled rounded corner style
+    static func styleButton(_ button:UIButton) {
         button.backgroundColor = UIColor.init(red: 149/255, green: 217/255, blue: 4/255, alpha: 1)
         button.setTitleColor(UIColor.black, for: .normal)
         button.layer.cornerRadius = 5.0
@@ -49,8 +48,8 @@ class Utilities {
     
     
     static func isPasswordValid(_ password : String) -> Bool {
-        // creates password requirement of 8 characters, with at least 1 number and 1 symbol
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        // creates password requirement of 6 characters, with at least 1 number and 1 symbol
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{6,}")
         return passwordTest.evaluate(with: password)
     }
     

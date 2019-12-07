@@ -54,8 +54,8 @@ class SummaryViewController: UIViewController {
         Utilities.styleLabel(hatchLbl)
         Utilities.styleLabel(sexLbl)
         Utilities.styleBackButtons(backBtn)
-        Utilities.styleFilledButton(logBtn)
-        Utilities.styleFilledButton(historyBtn)
+        Utilities.styleButton(logBtn)
+        Utilities.styleButton(historyBtn)
     }
     
     

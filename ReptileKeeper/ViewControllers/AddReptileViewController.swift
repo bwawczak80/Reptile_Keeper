@@ -84,7 +84,7 @@ class AddReptileViewController: UIViewController {
         Utilities.styleTextField(morphText, string: "Morph")
         Utilities.styleTextField(hatchDateText, string: "Hatch Date")
         Utilities.styleTextField(sexText, string: "Sex")
-        Utilities.styleFilledButton(addBtn)
+        Utilities.styleButton(addBtn)
         Utilities.styleBackButtons(backBtn)
     }
     

@@ -26,14 +26,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         
-        
-        // get the xib file and register it to the ViewController
-        let nib = UINib(nibName: "ReptileListCellTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "ReptileListCell")
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        
+        registerTableView()
         setUpElements()
         getReptileRecords()
     }
@@ -41,7 +34,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func setUpElements(){
         Utilities.styleViewControllerView(self.view)
-        Utilities.styleFilledButton(addBtn)
+        Utilities.styleButton(addBtn)
         Utilities.styleTableView(tableView)
         Utilities.styleBackButtons(backBtn)
     }
@@ -68,6 +61,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func registerTableView() {
+        // get the xib file and register it to the ViewController
+        let nib = UINib(nibName: "ReptileListCellTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "ReptileListCell")
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
     //MARK: - TableView Dataview and Datasource
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -85,6 +86,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return 1
     }
+    
     
     // Make the background color show through
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -118,6 +120,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if let userId = Auth.auth().currentUser?.uid {
+                let repIndex = indexPath.section
+                let reptile = reptiles[repIndex]
+                let repName = reptile.name!
+                db.collection("users").document(userId).collection("reptiles").document(repName).delete()
+                reptiles.remove(at: repIndex)
+                tableView.reloadData()
+            }
+        }
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "seg"){
             if let indexPath = tableView.indexPathForSelectedRow{
@@ -127,7 +143,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let nameToSend = repName
                 let destinationVC = segue.destination as! SummaryViewController
                 destinationVC.nameVar = nameToSend!
-                
             }
         }
     }

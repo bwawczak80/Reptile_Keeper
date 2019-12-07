@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         Utilities.styleViewControllerView(self.view)
         Utilities.styleTextField(emailText, string: "Email")
         Utilities.styleTextField(passwordText, string: "Password")
-        Utilities.styleFilledButton(loginBtn)
+        Utilities.styleButton(loginBtn)
         Utilities.styleBackButtons(backBtn)
     }
     
@@ -57,8 +57,6 @@ class LoginViewController: UIViewController {
         }
         
     }
-    
-    
 }
 
 

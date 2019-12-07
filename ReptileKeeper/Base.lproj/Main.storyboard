@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReptileKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reptile_Keeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
         <!--Login View Controller-->
         <scene sceneID="0Tb-iv-2FG">
             <objects>
-                <viewController id="a7W-Rp-z0r" customClass="LoginViewController" customModule="ReptileKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="a7W-Rp-z0r" customClass="LoginViewController" customModule="Reptile_Keeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kjQ-hC-bei">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,7 +165,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="dm9-QW-CLQ">
             <objects>
-                <viewController id="ROB-Ii-XyT" customClass="SignUpViewController" customModule="ReptileKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ROB-Ii-XyT" customClass="SignUpViewController" customModule="Reptile_Keeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rcb-d2-lSy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -340,7 +340,7 @@
         <!--Home View Controller-->
         <scene sceneID="HAh-79-dtd">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="Jds-7q-2Xd" customClass="HomeViewController" customModule="ReptileKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="Jds-7q-2Xd" customClass="HomeViewController" customModule="Reptile_Keeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6T7-Fe-a9P" customClass="home">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -458,7 +458,7 @@
         <!--Reptile Log View Controller-->
         <scene sceneID="qgl-OE-1ee">
             <objects>
-                <viewController id="GCH-KR-T2P" customClass="ReptileLogViewController" customModule="ReptileKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GCH-KR-T2P" customClass="ReptileLogViewController" customModule="Reptile_Keeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1YJ-BW-Nev">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -585,7 +585,7 @@
         <!--History View Controller-->
         <scene sceneID="VZW-oT-uNI">
             <objects>
-                <viewController id="d5F-51-pe9" customClass="HistoryViewController" customModule="ReptileKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d5F-51-pe9" customClass="HistoryViewController" customModule="Reptile_Keeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qjQ-uO-JwN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -655,7 +655,7 @@
         <!--Add Reptile View Controller-->
         <scene sceneID="rjM-fd-lI2">
             <objects>
-                <viewController id="UqR-JP-Dlu" customClass="AddReptileViewController" customModule="ReptileKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UqR-JP-Dlu" customClass="AddReptileViewController" customModule="Reptile_Keeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fUn-Xc-6eA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -791,7 +791,7 @@
         <!--Summary View Controller-->
         <scene sceneID="ZZW-hH-u0y">
             <objects>
-                <viewController id="k1b-fI-hQB" customClass="SummaryViewController" customModule="ReptileKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="k1b-fI-hQB" customClass="SummaryViewController" customModule="Reptile_Keeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vaQ-tU-iwB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1065,8 +1065,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="duu-br-WpI"/>
-        <segue reference="8rx-XY-r2q"/>
         <segue reference="7cl-93-qVE"/>
         <segue reference="09U-kN-bmG"/>
         <segue reference="vX3-OB-27u"/>

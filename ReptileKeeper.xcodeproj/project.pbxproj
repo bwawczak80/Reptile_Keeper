@@ -38,7 +38,7 @@
 		6B00EA162372364700DFEE62 /* AddReptileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReptileViewController.swift; sourceTree = "<group>"; };
 		6B13EE422381127C00EF7A1B /* ReptileLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReptileLogViewController.swift; sourceTree = "<group>"; };
 		6B4D80EB238406ED0089F20A /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
-		6B66736F2366E7F500B71884 /* ReptileKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReptileKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B66736F2366E7F500B71884 /* Reptile Keeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reptile Keeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6673722366E7F500B71884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B6673742366E7F500B71884 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6B6673762366E7F500B71884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		6B6673702366E7F500B71884 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6B66736F2366E7F500B71884 /* ReptileKeeper.app */,
+				6B66736F2366E7F500B71884 /* Reptile Keeper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 			);
 			name = ReptileKeeper;
 			productName = ReptileKeeper;
-			productReference = 6B66736F2366E7F500B71884 /* ReptileKeeper.app */;
+			productReference = 6B66736F2366E7F500B71884 /* Reptile Keeper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -450,18 +450,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 27A06B1E0454B591739B4F5C /* Pods-ReptileKeeper.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = VLL5PXFDUH;
 				INFOPLIST_FILE = ReptileKeeper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brianwawczak.ReptileKeeper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Reptile Keeper";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -469,18 +471,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 29E491EF701DD292CC8A790A /* Pods-ReptileKeeper.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = VLL5PXFDUH;
 				INFOPLIST_FILE = ReptileKeeper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brianwawczak.ReptileKeeper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Reptile Keeper";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

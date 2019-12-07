@@ -66,7 +66,7 @@ class ReptileLogViewController: UIViewController {
         Utilities.styleTextField(humidityText, string: "Humidity %")
         Utilities.styleTextField(feedingText, string: "Food item or none")
         Utilities.styleTextField(weightText, string: "Weight in grams")
-        Utilities.styleFilledButton(logBtn)
+        Utilities.styleButton(logBtn)
         Utilities.styleBackButtons(backBtn)
         Utilities.styleLabel(logHeader)
     }
